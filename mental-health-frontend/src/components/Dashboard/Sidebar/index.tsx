@@ -90,36 +90,36 @@ const sidebarMenus: SidebarMenu[] = [
       }
     ]
   },
-  {
-    name: 'Hồ sơ bệnh án',
-    path: '/dashboard/medical-record',
-    role: ['user', 'doctor'],
-    icon: <i className='bi bi-journal-medical'></i>
-  },
+  // {
+  //   name: 'Hồ sơ bệnh án',
+  //   path: '/dashboard/medical-record',
+  //   role: ['user', 'doctor'],
+  //   icon: <i className='bi bi-journal-medical'></i>
+  // },
   {
     name: 'Thời gian làm việc',
     path: '/dashboard/schedule',
     role: ['doctor'],
     icon: <i className='bi bi-clock'></i>
   },
-  {
-    name: 'Phương pháp trị liệu',
-    path: '/dashboard/treatment',
-    role: ['doctor', 'admin'],
-    icon: <i className='bi bi-bandaid'></i>,
-    children: [
-      {
-        name: 'Danh sách',
-        path: '/',
-        role: ['admin', 'doctor']
-      },
-      {
-        name: 'Thêm mới',
-        path: '/create',
-        role: ['admin', 'doctor']
-      }
-    ]
-  },
+  // {
+  //   name: 'Phương pháp trị liệu',
+  //   path: '/dashboard/treatment',
+  //   role: ['doctor', 'admin'],
+  //   icon: <i className='bi bi-bandaid'></i>,
+  //   children: [
+  //     {
+  //       name: 'Danh sách',
+  //       path: '/',
+  //       role: ['admin', 'doctor']
+  //     },
+  //     {
+  //       name: 'Thêm mới',
+  //       path: '/create',
+  //       role: ['admin', 'doctor']
+  //     }
+  //   ]
+  // },
   {
     name: 'Thông tin',
     path: '/dashboard/profile',
@@ -144,8 +144,7 @@ export default function SidebarDashboard() {
                     data-bs-target={`#menu-${index}`}
                     data-bs-toggle='collapse'
                     href='#'
-                    aria-expanded='false'
-                  >
+                    aria-expanded='false'>
                     {icon}
                     <span>{name}</span>
                     <i className='bi bi-chevron-down ms-auto'></i>

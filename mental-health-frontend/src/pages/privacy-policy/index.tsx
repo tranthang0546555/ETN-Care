@@ -51,8 +51,7 @@ export default function PrivacyPolicy() {
         <p>
           Bạn có quyền truy cập, sửa đổi, cập nhật, xoá hoặc yêu cầu chúng tôi ngừng xử lý thông tin cá nhân của bạn bất
           cứ lúc nào. Bạn cũng có quyền từ chối hoặc hủy bỏ việc đồng ý cho chúng tôi thu thập, sử dụng hoặc chia sẻ
-          thông tin cá nhân của bạn. Bạn có thể thực hiện các quyền này bằng cách liên hệ với chúng tôi qua email:
-          tnthang.18it5@vku.udn.vn
+          thông tin cá nhân của bạn. Bạn có thể thực hiện các quyền này bằng cách liên hệ với chúng tôi.
         </p>
         <b>Chúng tôi sử dụng cookie và công nghệ tương tự để làm gì?</b>
         <p>
@@ -64,10 +63,7 @@ export default function PrivacyPolicy() {
           Tuy nhiên, nếu bạn từ chối cookie, bạn có thể không thể sử dụng một số tính năng hoặc dịch vụ trên website
           này.
         </p>
-        <p>
-          Nếu bạn có bất kỳ câu hỏi nào về trang chính sách bảo mật này, xin vui lòng liên hệ với chúng tôi qua email:
-          tnthang.18it5@vku.udn.vn
-        </p>
+        <p>Nếu bạn có bất kỳ câu hỏi nào về trang chính sách bảo mật này, xin vui lòng liên hệ với chúng tôi.</p>
       </div>
     </section>
   )

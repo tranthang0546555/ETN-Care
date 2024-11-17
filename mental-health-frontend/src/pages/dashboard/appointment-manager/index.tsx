@@ -31,18 +31,18 @@ export default function AppointmentManager({ option }: Props) {
         header: 'Phòng khám',
         accessorFn: (originalRow) => originalRow.room || '-'
       },
-      {
-        id: 'room-online',
-        header: 'Phòng online',
-        accessorFn({ code }) {
-          return (
-            <Link to={`/online-appointment/${code}`}>
-              <b style={{ color: 'var(--color-default)' }}>{code}</b>
-            </Link>
-          )
-        },
-        size: 1
-      },
+      // {
+      //   id: 'room-online',
+      //   header: 'Phòng online',
+      //   accessorFn({ code }) {
+      //     return (
+      //       <Link to={`/online-appointment/${code}`}>
+      //         <b style={{ color: 'var(--color-default)' }}>{code}</b>
+      //       </Link>
+      //     )
+      //   },
+      //   size: 1
+      // },
       {
         header: role === 'doctor' ? 'Bệnh nhân' : 'Bác sĩ',
         accessorFn: (originalRow) =>
