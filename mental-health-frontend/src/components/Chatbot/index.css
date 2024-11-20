@@ -46,5 +46,6 @@
 }
 
 .react-chatbot-kit-chat-container {
-    width: 600px;
+    max-width: 600px;
+    width: 80vw;
 }
