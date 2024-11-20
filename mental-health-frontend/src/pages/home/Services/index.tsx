@@ -56,11 +56,11 @@ export default function Services() {
                 </div>
                 <h4>
                   <a href='' className='title-theme'>
-                    Đặt lịch hẹn khám online
+                    Đặt lịch hẹn khám
                   </a>
                 </h4>
                 <p>
-                  Cho phép người dùng đặt lịch hẹn khám trực tuyến, giúp tiết kiệm thời gian và tạo thuận lợi cho bệnh
+                  Cho phép người dùng đặt lịch hẹn khám trên website, giúp tiết kiệm thời gian và tạo thuận lợi cho bệnh
                   nhân.
                 </p>
               </div>

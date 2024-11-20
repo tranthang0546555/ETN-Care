@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
-import { useAppSelector } from '../../hooks/store'
+import { useAppDispatch, useAppSelector } from '../../hooks/store'
 import LoginRegisterButton from '../LoginRegisterButton'
 import ThemeSwitch from '../ThemeSwitch'
 import Logo from './Logo'
 import './index.css'
+import { logOut } from '../../store/authSlice'
+import { avatarPath } from '../../utils'
 
 const maps: {
   path: string
@@ -17,6 +19,8 @@ const maps: {
 ]
 export default function Header() {
   const login = useAppSelector((state) => state.auth.login)
+  const user = useAppSelector((state) => state.auth.user)
+  const dispatch = useAppDispatch()
   const handleNavbarMobileToggle = () => {
     const nav = document.getElementById('navbar')?.classList
     const navToggle = document.getElementById('nav-toggle')?.classList
@@ -79,23 +83,59 @@ export default function Header() {
                   </li>
                 )
               })}
-              <li>
+              {/* <li>
                 {login && (
                   <Link className={`dashboard-button active}`} to='/dashboard'>
                     Dashboard
                   </Link>
                 )}
-              </li>
+              </li> */}
             </ul>
             <i id='nav-toggle' className='bi bi-list mobile-nav-toggle' onClick={handleNavbarMobileToggle}></i>
           </nav>
 
           <Link to='/appointment' className='appointment-btn scrollto'>
-            Đặt lịch <span className='d-none d-md-inline'>khám Online</span>
+            Đặt lịch <span className='d-none d-md-inline'>khám</span>
           </Link>
 
           <LoginRegisterButton />
           <ThemeSwitch />
+          <ul className='dropdown-profile'>
+            <li className='header-nav-dashboard nav-item dropdown pe-3'>
+              <a className='nav-link nav-profile d-flex align-items-center pe-0' href='#' data-bs-toggle='dropdown'>
+                <img src={avatarPath(user?.avatar)} alt='Profile' className='rounded-circle' />
+                <span className='d-none d-md-block dropdown-toggle ps-2'>{user?.name?.firstName}</span>
+              </a>
+
+              <ul className='dropdown-menu dropdown-menu-end dropdown-menu-arrow profile'>
+                <li className='dropdown-header'>
+                  <Link to='/dashboard/profile'>
+                    <h6>{user?.fullName}</h6>
+                    <span>{user?.email}</span>
+                  </Link>
+                </li>
+                <li>
+                  <hr className='dropdown-divider' />
+                </li>
+
+                <li>
+                  <Link className='dropdown-item d-flex align-items-center' to='/dashboard'>
+                    <i className='bi bi-house'></i>
+                    <span>Dashboard</span>
+                  </Link>
+                </li>
+                <li>
+                  <hr className='dropdown-divider' />
+                </li>
+                <li>
+                  <button className='dropdown-item d-flex align-items-center' onClick={() => dispatch(logOut())}>
+                    <i className='bi bi-box-arrow-right'></i>
+                    <span>Đăng xuất</span>
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </header>
     </>

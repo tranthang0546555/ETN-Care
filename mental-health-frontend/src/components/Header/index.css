@@ -30,7 +30,11 @@
 #header .logo .logo-container {
   height: 70px;
 }
-
+#header .dropdown-profile {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
 #header .logo .logo-container img {
   width: auto;
   height: 100%;

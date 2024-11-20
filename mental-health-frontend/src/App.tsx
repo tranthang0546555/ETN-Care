@@ -158,7 +158,7 @@ const router = createBrowserRouter([
   {
     path: 'appointment',
     element: (
-      <Layout title='Đặt lịch khám Online'>
+      <Layout title='Đặt lịch khám'>
         <Appointment />
       </Layout>
     )
